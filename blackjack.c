@@ -29,7 +29,7 @@ int cards_drawn[DECK_SIZE];
 int cards_drawn_cnt = 0;
 
 char *draw_card() {
-    int card = rand() % DECK_SIZE;
+    int card = rand() % (DECK_SIZE + 1);
     
     for (int i = 0; i < cards_drawn_cnt; i++) {
         if (cards_drawn[i] == card)
